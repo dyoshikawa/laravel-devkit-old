@@ -1,9 +1,9 @@
 version: '3'
 services:
   app:
-    image: dyoshikawa/laravel-dockerfile:latest
+    image: dyoshikawa/laravel:latest
     volumes:
-      - ./:/var/www/laravel
+      - ./:/app
     ports:
       - 8000:8000
     depends_on:
