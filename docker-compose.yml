@@ -4,6 +4,7 @@ services:
     image: dyoshikawa/laravel:dev
     volumes:
       - ./:/app
+    command: bash -c "composer install && cp -p .env.example .env && php artisan key:generate  && php artisan serve --host 0.0.0.0"
     ports:
       - 8000:8000
     depends_on:
