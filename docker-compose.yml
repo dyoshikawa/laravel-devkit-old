@@ -4,6 +4,8 @@ services:
     image: dyoshikawa/laravel:dev
     volumes:
       - ./:/app
+    command:
+      bash -c "composer install && cp -p .env.devkit .env && php artisan key:generate && php artisan serve --host 0.0.0.0"
     ports:
       - 8000:8000
     depends_on:
@@ -11,4 +13,5 @@ services:
   db:
     image: mysql:latest
     environment:
-      MYSQL_ROOT_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: "password"
+      MYSQL_DATABASE: "laravel"
