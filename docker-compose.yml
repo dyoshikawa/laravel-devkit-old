@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    image: dyoshikawa/laravel:dev
+    image: dyoshikawa/laravel:latest
     volumes:
       - ./:/app
     ports:
