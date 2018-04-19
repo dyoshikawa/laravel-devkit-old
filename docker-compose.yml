@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    image: dyoshikawa/laravel:latest
+    image: dyoshikawa/laravel:pgsql
     volumes:
       - ./:/app
     ports:
@@ -9,7 +9,6 @@ services:
     depends_on:
       - db
   db:
-    image: mysql:latest
+    image: postgres:alpine
     environment:
-      MYSQL_ROOT_PASSWORD: "password"
-      MYSQL_DATABASE: "laravel"
+      POSTGRES_PASSWORD: password
