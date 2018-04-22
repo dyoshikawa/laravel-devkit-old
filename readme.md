@@ -1,6 +1,6 @@
 # Getting Started
 ```
-git clone https://github.com/dyoshikawa/laravel-devkit
+git clone https://github.com/dyoshikawa/laravel-devkit -b heroku
 cd laravel-devkit
 sh first-boot.sh
 docker-compose up -d
