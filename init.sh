@@ -3,7 +3,6 @@
 echo "Initialized start"
 
 if [ ! -f composer.json ]; then
-
     echo "delete files"
 
     path=`ls -a`;
@@ -36,6 +35,7 @@ if [ ! -f composer.json ]; then
     mv laravel-app/* .
     mv laravel-app/.??* .
     rmdir laravel-app
+    rm .env
 fi
 
 docker run --rm -v `pwd`/:/app dyoshikawa/laravel:latest bash -c \
