@@ -3,7 +3,7 @@ services:
   app:
     image: dyoshikawa/laravel:latest
     volumes:
-      - .:/myproject
+      - .:/myproject:cached
     ports:
       - 8000:8000
     depends_on:
@@ -13,6 +13,6 @@ services:
     environment:
       POSTGRES_PASSWORD: password
     volumes:
-      - ./db-data:/var/lib/pgsql
+      - ./db-data:/var/lib/pgsql:cached
     ports:
       - 5432:5432
