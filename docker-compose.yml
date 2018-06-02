@@ -3,7 +3,7 @@ services:
   app:
     image: dyoshikawa/laravel:latest
     volumes:
-      - ./:/myproject
+      - .:/myproject
     ports:
       - 8000:8000
     depends_on:
@@ -12,5 +12,7 @@ services:
     image: postgres:alpine
     environment:
       POSTGRES_PASSWORD: password
+    volumes:
+      - ./db-data:/var/lib/pgsql
     ports:
       - 5432:5432
