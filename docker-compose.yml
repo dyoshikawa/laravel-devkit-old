@@ -13,6 +13,6 @@ services:
     environment:
       POSTGRES_PASSWORD: password
     volumes:
-      - ./db-data:/var/lib/pgsql:cached
+      - ./db-data:/var/lib/postgresql/data:cached
     ports:
       - 5432:5432
