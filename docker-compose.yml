@@ -11,8 +11,9 @@ services:
   db:
     image: dyoshikawa/mysql:latest
     environment:
-      POSTGRES_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: homestead
     volumes:
-      - ./mysql-data:/var/lib/mysql/data:cached
+      - ./mysql-data:/var/lib/mysql:cached
     ports:
-      - 5432:5432
+      - 3306:3306
