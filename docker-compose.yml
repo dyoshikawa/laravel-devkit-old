@@ -9,10 +9,10 @@ services:
     depends_on:
       - db
   db:
-    image: postgres:alpine
+    image: dyoshikawa/mysql:latest
     environment:
-      POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD: secret
     volumes:
-      - ./db-data:/var/lib/postgresql/data:cached
+      - ./mysql-data:/var/lib/mysql/data:cached
     ports:
       - 5432:5432
